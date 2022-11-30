@@ -7,6 +7,7 @@ using TMPro;
 public class CanvasContorller : MonoBehaviour
 {
     public GameObject textMonedas;
+    public GameObject textFin;
     public Button button;
     GameObject playerGO;
     JugadorController player;
@@ -24,10 +25,12 @@ public class CanvasContorller : MonoBehaviour
         if (player.getMonedas() != 10)
         {
             button.gameObject.SetActive(false);
+            textFin.gameObject.SetActive(false);
         }
         else
         {
             button.gameObject.SetActive(true);
+            textFin.gameObject.SetActive(true);
         }
     }
 }
