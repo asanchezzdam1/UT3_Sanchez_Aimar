@@ -13,12 +13,14 @@ public class JugadorController : MonoBehaviour
     public float thrust = 10;
 
     public int monedas;
+    public int totalDeMonedas;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         speed = 5;
         monedas = 0;
+        totalDeMonedas = 10;
     }
 
     // Update is called once per frame
@@ -37,5 +39,9 @@ public class JugadorController : MonoBehaviour
     public void jump()
     {
         rb.AddForce(0, thrust, 0, ForceMode.Impulse);
+    }
+    public int getMonedas()
+    {
+        return monedas;
     }
 }
