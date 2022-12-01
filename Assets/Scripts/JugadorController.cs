@@ -9,8 +9,7 @@ public class JugadorController : MonoBehaviour
 
     Rigidbody rb;
     public int speed;
-    public float JumpV = 10;
-    public float thrust = 10;
+
 
     public int monedas;
     public int totalDeMonedas;
@@ -38,7 +37,7 @@ public class JugadorController : MonoBehaviour
     }
     public void jump()
     {
-        rb.AddForce(0, thrust, 0, ForceMode.Impulse);
+        rb.AddForce(0, 5, 0, ForceMode.Impulse);
     }
     public int getMonedas()
     {
